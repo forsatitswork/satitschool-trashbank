@@ -114,8 +114,6 @@
 
         <!-- 🔴 ปุ่มออกจากระบบ -->
         <div class="flex justify-center gap-2 items-center mt-4">
-            <button onclick="exportLoginLogs()" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">
-            ดาวน์โหลดประวัติการเข้าสู่ระบบ</button>
             <button onclick="logout()" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
             ออกจากระบบ</button>
         </div>
@@ -973,7 +971,7 @@
         }
 
         // Daily summary
-        function generateDailySummary() {
+         function generateDailySummary() {
             const date = document.getElementById('summaryDate').value;
             const grade = document.getElementById('summaryGrade').value;
             const room = document.getElementById('summaryRoom').value;
@@ -1302,9 +1300,6 @@
             link.click();
             document.body.removeChild(link);
         }
-
- 
-
 
 
     </script>
