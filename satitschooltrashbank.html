@@ -110,12 +110,14 @@
             ส่งออกสรุปห้องนี้
             </button>
         </div>
+        
 
         <!-- 🔴 ปุ่มออกจากระบบ -->
-        <div class="flex justify-center mt-4">
+        <div class="flex justify-center gap-2 items-center mt-4">
+            <button onclick="exportLoginLogs()" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors">
+            ดาวน์โหลดประวัติการเข้าสู่ระบบ</button>
             <button onclick="logout()" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
-            ออกจากระบบ
-            </button>
+            ออกจากระบบ</button>
         </div>
     </div>
 
@@ -1300,6 +1302,10 @@
             link.click();
             document.body.removeChild(link);
         }
+
+ 
+
+
 
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96659ecb923e7b62',t:'MTc1MzcxODc1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
