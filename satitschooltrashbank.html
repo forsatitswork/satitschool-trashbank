@@ -81,34 +81,37 @@
 
         <!-- ✅ ตัวเลือกห้องและปุ่มส่งออก (วางใต้เมนูหลัก แต่เหนือ logout) -->
         <div class="flex flex-wrap gap-2 justify-center items-center mt-4">
-            <select id="summaryGrade" class="px-2 py-1 border rounded">
-            <option value="">-- เลือกระดับชั้น --</option>
-            <option value="อ.1">อ.1</option>
-            <option value="อ.2">อ.2</option>
-            <option value="อ.3">อ.3</option>
-            <option value="ป.1">ป.1</option>
-            <option value="ป.2">ป.2</option>
-            <option value="ป.3">ป.3</option>
-            <option value="ป.4">ป.4</option>
-            <option value="ป.5">ป.5</option>
-            <option value="ป.6">ป.6</option>
+            <!-- ✅ เปลี่ยน id ตรงนี้ให้ไม่ซ้ำ -->
+            <select id="exportSummaryGrade" class="px-2 py-1 border rounded">
+                <option value="">-- เลือกระดับชั้น --</option>
+                <option value="อ.1">อ.1</option>
+                <option value="อ.2">อ.2</option>
+                <option value="อ.3">อ.3</option>
+                <option value="ป.1">ป.1</option>
+                <option value="ป.2">ป.2</option>
+                <option value="ป.3">ป.3</option>
+                <option value="ป.4">ป.4</option>
+                <option value="ป.5">ป.5</option>
+                <option value="ป.6">ป.6</option>
             </select>
 
-            <select id="summaryRoom" class="px-2 py-1 border rounded">
-            <option value="">-- เลือกห้องเรียน --</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
+            <select id="exportSummaryRoom" class="px-2 py-1 border rounded">
+                <option value="">-- เลือกห้องเรียน --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
             </select>
 
+            <!-- ✅ ไม่ต้องแก้ปุ่ม เพียงแก้โค้ดฟังก์ชันด้านล่าง -->
             <button onclick="exportSummaryOfSelectedClass()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
-            ส่งออกสรุปห้องนี้
+                ส่งออกสรุปห้องนี้
             </button>
+
         </div>
         
 
@@ -993,6 +996,7 @@
                 });
             }
 
+
             const container = document.getElementById('dailySummaryResult');
 
             if (dayTransactions.length === 0) {
@@ -1232,8 +1236,9 @@
         }
 
         function exportSummaryOfSelectedClass() {
-            const grade = document.getElementById('summaryGrade').value;
-            const room = document.getElementById('summaryRoom').value;
+            const grade = document.getElementById('exportSummaryGrade').value;
+            const room = document.getElementById('exportSummaryRoom').value;
+
 
             if (!grade || !room) {
                 alert("กรุณาเลือกระดับชั้นและห้องเรียน");
